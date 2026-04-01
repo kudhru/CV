@@ -1,0 +1,603 @@
+%==============================================================================
+%  BIO-DATA — Dr. Dhruv Kumar  (ANRF Version)
+%  Design adapted from modern faculty template
+%==============================================================================
+\documentclass[10pt, a4paper]{article}
+
+%--------------------------------------------------------------------------
+% Packages
+%--------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1.8cm, top=1.5cm, bottom=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{needspace}
+
+%--------------------------------------------------------------------------
+% Color Palette
+%--------------------------------------------------------------------------
+\definecolor{AccentBlue}{HTML}{1B4F8A}       % deep navy
+\definecolor{AccentLight}{HTML}{3A7FD5}      % mid blue
+\definecolor{AccentVeryLight}{HTML}{EBF2FB}  % tint for table rows
+\definecolor{RuleGray}{HTML}{CCCCCC}
+\definecolor{TextGray}{HTML}{444444}
+\definecolor{AwardRed}{HTML}{C0392B}
+\definecolor{HeaderBg}{HTML}{1B4F8A}
+\definecolor{HeaderText}{HTML}{FFFFFF}
+\definecolor{SubheadText}{HTML}{5B8DD9}
+\definecolor{LightBg}{HTML}{F4F8FD}
+
+%--------------------------------------------------------------------------
+% Hyperref Setup
+%--------------------------------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=AccentLight,
+  linkcolor=AccentBlue,
+  pdfauthor={Dr. Dhruv Kumar},
+  pdftitle={BIO-DATA — Dr. Dhruv Kumar (ANRF)},
+}
+
+%--------------------------------------------------------------------------
+% Header / Footer
+%--------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{TextGray} Dr.\ Dhruv Kumar — BIO-DATA (ANRF)}
+\fancyfoot[R]{\footnotesize\color{TextGray} Page \thepage\ of \pageref{LastPage}}
+
+%--------------------------------------------------------------------------
+% Section Styling  (for subsections used in publications)
+%--------------------------------------------------------------------------
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{AccentBlue}}
+  {}
+  {0em}
+  {}
+
+\titlespacing*{\subsection}{0pt}{0.8em}{0.2em}
+
+%--------------------------------------------------------------------------
+% Custom Commands
+%--------------------------------------------------------------------------
+
+% Numbered ANRF section heading with blue rule
+\newcommand{\cvsection}[2]{%
+  \vspace{1.0em}%
+  \noindent{\large\bfseries\color{AccentBlue}#1.\ \ #2}\par%
+  \vspace{-0.5em}%
+  {\color{AccentBlue}\rule{\linewidth}{1.5pt}}\par%
+  \vspace{0.4em}%
+}
+
+% Un-numbered section heading (used for Sections 8, 9, 10)
+\newcommand{\cvsectionnn}[1]{%
+  \vspace{1.0em}%
+  \noindent{\large\bfseries\color{AccentBlue}#1}\par%
+  \vspace{-0.5em}%
+  {\color{AccentBlue}\rule{\linewidth}{1.5pt}}\par%
+  \vspace{0.4em}%
+}
+
+% Award tag
+\newcommand{\award}[1]{%
+  {\small\bfseries\color{AwardRed}[#1]}%
+}
+
+% Info row: bold label + value
+\newcommand{\inforow}[2]{%
+  \noindent
+  \begin{minipage}[t]{0.38\linewidth}
+    \textbf{\color{AccentBlue}#1}
+  \end{minipage}%
+  \begin{minipage}[t]{0.62\linewidth}
+    #2
+  \end{minipage}\\[0.35em]
+}
+
+% Column types
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% List spacing
+\setlist[enumerate]{leftmargin=1.6em, itemsep=0.25em, parsep=0pt, topsep=0.3em}
+\setlist[itemize]{leftmargin=1.6em, itemsep=0.1em, parsep=0pt, topsep=0.15em}
+
+%==========================================================================
+\begin{document}
+\thispagestyle{fancy}
+
+%==========================================================================
+%  HEADER BANNER
+%==========================================================================
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[AccentBlue] (current page.north west) rectangle
+    ([yshift=-4.4cm]current page.north east);
+\end{tikzpicture}
+
+\vspace{-0.9cm}
+\begin{minipage}[t]{0.65\linewidth}
+  \color{white}
+  {\fontsize{24}{29}\selectfont\bfseries Dr.\ Dhruv Kumar}\\[0.3em]
+  {\large\color{white}\bfseries BIO-DATA}\\[0.25em]
+  {\normalsize Assistant Professor, BITS Pilani}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.33\linewidth}
+  \raggedleft\color{white}\small
+  {\hypersetup{urlcolor=white}\href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily\footnotesize dhruv.kumar@pilani.bits-pilani.ac.in}}\\[0.5em]
+  (+91)\ 77427\ 10554
+\end{minipage}
+
+\vspace{2.8em}
+
+%==========================================================================
+%  SECTIONS 1–7: PERSONAL DETAILS
+%==========================================================================
+\cvsectionnn{Personal Details}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \color{white}\textbf{Field} & \color{white}\textbf{Details} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Name}               & Dr.\ Dhruv Kumar \\
+  \textbf{Address}            & 6120-F, New Academic Building, BITS Pilani, Rajasthan -- 333031 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Institution}        & Birla Institute of Technology \& Science (BITS), Pilani \\
+  \textbf{Email}              & \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily dhruv.kumar@pilani.bits-pilani.ac.in} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Phone}              & (+91)\ 77427\ 10554 \\
+  \textbf{Date of Birth}      & 11 January 1994 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Gender}             & Male \\
+  \textbf{Category}           & General \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Differently Abled}  & No \\
+  \textbf{ORCID}              & 0000-0003-4831-1847 \\
+\end{tabularx}
+
+%==========================================================================
+%  SECTION 8: ACADEMIC QUALIFICATIONS
+%==========================================================================
+\cvsectionnn{Academic Qualifications}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{C{0.5cm} L{2.8cm} C{1.3cm} L{4.0cm} L{5.2cm} C{1.8cm}}
+  \rowcolor{AccentBlue}
+  \color{white}\textbf{\#} &
+  \color{white}\textbf{Degree} &
+  \color{white}\textbf{Year} &
+  \color{white}\textbf{Subject} &
+  \color{white}\textbf{University\,/\,Institution} &
+  \color{white}\textbf{CGPA} \\
+  \rowcolor{AccentVeryLight}
+  1 & B.E.\ (Hons.) & 2014 & Computer Science &
+    Birla Institute of Technology and Science, Pilani & 9.92/10 \\
+  2 & Ph.D. & 2022 & Computer Science \& Engineering &
+    University of Minnesota, Twin Cities, USA & 4.0/4.0 \\
+\end{tabularx}
+
+%==========================================================================
+%  SECTION 9: PhD DETAILS  (commented out — not required for ANRF bio-data)
+%==========================================================================
+\iffalse
+\cvsectionnn{Ph.D.\ Thesis}
+
+\vspace{0.2em}
+\noindent
+{\color{AccentBlue}\bfseries Thesis Title:}\enspace
+\textit{Optimizing Aggregation and Join Queries in Geo-Distributed Data Analytics}\\[0.3em]
+{\color{AccentBlue}\bfseries Guide:}\enspace Dr.\ Abhishek Chandra
+\quad\textbullet\quad
+{\color{AccentBlue}\bfseries University:}\enspace University of Minnesota, Twin Cities, USA
+\quad\textbullet\quad
+{\color{AccentBlue}\bfseries Year:}\enspace 2022
+\fi
+
+%==========================================================================
+%  SECTION 10: WORK EXPERIENCE
+%==========================================================================
+\cvsectionnn{Work Experience}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{C{0.5cm} L{3.5cm} L{6.5cm} C{1.8cm} C{1.8cm}}
+  \rowcolor{AccentBlue}
+  \color{white}\textbf{\#} &
+  \color{white}\textbf{Position} &
+  \color{white}\textbf{Institution} &
+  \color{white}\textbf{From} &
+  \color{white}\textbf{To} \\
+  \rowcolor{AccentVeryLight}
+  1 & Assistant Professor & BITS Pilani & May 2024 & Present \\
+  2 & Adjunct Faculty & IIIT Delhi & May 2024 & Present \\
+  \rowcolor{AccentVeryLight}
+  3 & Assistant Professor & IIIT Delhi & Aug 2022 & May 2024 \\
+  4 & Post-Doctoral Researcher & Microsoft Research, Bengaluru & Mar 2022 & Jul 2022 \\
+  \rowcolor{AccentVeryLight}
+  5 & Ph.D.\ Intern & Google Cloud, California, USA & May 2019 & Aug 2019 \\
+  6 & Software Engineer / Quant Analyst & Goldman Sachs, Bengaluru & Nov 2014 & Apr 2016 \\
+  \rowcolor{AccentVeryLight}
+  7 & Summer Intern & CSIR-CEERI, Pilani & May 2012 & Jul 2012 \\
+\end{tabularx}
+
+%==========================================================================
+%  SECTION 11: AWARDS & FELLOWSHIPS
+%==========================================================================
+\needspace{12\baselineskip}
+\cvsectionnn{Professional Recognition\,/\,Awards\,/\,Prizes\,/\,Fellowships}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{C{0.5cm} L{5.8cm} L{5.8cm} C{1.5cm}}
+  \rowcolor{AccentBlue}
+  \color{white}\textbf{\#} &
+  \color{white}\textbf{Award\,/\,Recognition} &
+  \color{white}\textbf{Awarding Body} &
+  \color{white}\textbf{Year} \\
+  \rowcolor{AccentVeryLight}
+  1 & Teaching Excellence Award (AY 2023--24) & IIIT Delhi & Sep 2024 \\
+  2 & Teaching Excellence Award (AY 2022--23) & IIIT Delhi & Sep 2023 \\
+  \rowcolor{AccentVeryLight}
+  3 & 3M Science and Technology Fellowship & University of Minnesota, Twin Cities & 2017--2021 \\
+  4 & Travel Grant & USENIX ATC & 2019 \\
+  \rowcolor{AccentVeryLight}
+  5 & Travel Grant & ACM SIGMETRICS & 2019 \\
+  6 & Travel Grant & USENIX OSDI & 2018 \\
+  \rowcolor{AccentVeryLight}
+  7 & Merit Scholarship (Top 10 among 800 students) & BITS Pilani & 2010--2014 \\
+  8 & Outstanding Undergraduate Thesis & BITS Pilani & 2014 \\
+\end{tabularx}
+
+%==========================================================================
+%  SECTION 12: PUBLICATIONS
+%==========================================================================
+\cvsectionnn{Publications (in Year-wise Descending Order)}
+
+\noindent\small\textit{Author's name in \textbf{bold}.\enspace
+\award{Best Paper Award} denotes prize-winning papers.}
+
+\vspace{0.5em}
+
+%----------------------------------------------------------------------
+\subsection*{Journal Articles \& Transactions}
+%----------------------------------------------------------------------
+\begin{enumerate}[label=\textbf{J\arabic*.}, leftmargin=2.8em, itemsep=0.3em]
+
+\item Alakh Sharma, Gaurish Trivedi, Kartikey Singh Bhandari, Yash Sinha, \textbf{Dhruv Kumar}, Pratik Narang, and Jagat Sesh Challa. 2026. Generative Evolutionary Meta-Solver (GEMS): Scalable Surrogate-Free Multi-Agent Reinforcement Learning. \textbf{Transactions on Machine Learning Research (TMLR) 2026}.
+
+\item Raj Gupta, Harshita Goyal, \textbf{Dhruv Kumar}, Apurv Mehra, Sanchit Sharma, Kashish Mittal, and Jagat Sesh Challa. 2026. Sakshm AI: Advancing AI-Assisted Coding Education for Engineering Students in India Through Socratic Tutoring and Comprehensive Feedback. \textbf{ACM Journal on Computing and Sustainable Societies (JCSS) 2026}.
+
+\item Harshita Goyal, Garima Garg, Prisha Mordia, Veena Ramachandran, \textbf{Dhruv Kumar}, and Jagat Sesh Challa. 2025. The Impact of Large Language Models on K-12 Education in Rural India: A Thematic Analysis of Student Volunteers' Perspectives. \textbf{Scientific Reports (2025)}.
+
+\item Balamurugan Palanisamy, Vikas Hassija, Arpita Chatterjee, Arpita Mandal, Debanshi Chakraborty, Amit Pandey, G.\ Sai Sesha Chalapathi, and \textbf{Dhruv Kumar}. 2025. Transformers for Vision: A Survey on Innovative Methods for Computer Vision. \textbf{IEEE Access 13 (2025)}, 95496--95523.
+
+\item Harshal Akolekar, Piyush Jhamnani, Vikash Kumar, Vinay Tailor, Aditya Pote, Ankit Meena, Kamal Kumar, Jagat Sesh Challa, and \textbf{Dhruv Kumar}. 2025. The Role of Generative AI Tools in Shaping Mechanical Engineering Education from an Undergraduate Perspective. \textbf{Scientific Reports 15 (2025)}, Article 9214.
+
+\item Ashutosh Sharma, \textbf{Dhruv Kumar}, Srinivas Rallapalli, et al.\ 2023. Wetland Functional Assessment and Uncertainty Analysis Using Fuzzy Alpha-Cut--Based Modified Hydrogeomorphic Approach. \textbf{Environmental Science \& Pollution Research 30 (2023)}, 72900--72915.
+
+\item Ananya Jain, Srinivas Rallapalli, and \textbf{Dhruv Kumar}. 2022. Cloud-Based Neuro-Fuzzy Hydro-Climatic Model for Water Quality Assessment under Uncertainty and Sensitivity. \textbf{Environmental Science \& Pollution Research 29 (2022)}, 65259--65275.
+
+\item Poonam Goyal, Jagat Sesh Challa, \textbf{Dhruv Kumar}, Anuvind Bhat, Sundar Balasubramaniam, and Navneet Goyal. 2020. Grid-R-Tree: A Data Structure for Efficient Neighborhood and Nearest Neighbor Queries in Data Mining. \textbf{Int.\ J.\ Data Sci.\ Anal.\ 10 (2020)}, 25--47.
+
+\item \textbf{Dhruv Kumar}, Jian Li, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2019. A TTL-Based Approach for Data Aggregation in Geo-Distributed Streaming Analytics. \textbf{Proc.\ ACM MACS 3, 2 (2019)}, 29:1--29:27.
+
+\item \textbf{Dhruv Kumar}, Poonam Goyal, and Navneet Goyal. 2018. An Efficient Method for Batch Updates in OPTICS Cluster Ordering. \textbf{Int.\ J.\ Data Anal.\ Tech.\ Strateg.\ 10 (2018)}, 57--80.
+
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsection*{Conference Papers}
+%----------------------------------------------------------------------
+\begin{enumerate}[label=\textbf{C\arabic*.}, leftmargin=2.8em, itemsep=0.3em]
+
+\item Vikranth Udandarao, Noel Abraham Tiju, Muthuraj Vairamuthu, Harsh Mistry, and \textbf{Dhruv Kumar}. 2026. Roamify: Designing and Evaluating an LLM-Based Google Chrome Extension for Personalised Itinerary Planning. In \textbf{The Web Conference (WWW) 2026}.
+
+\item Debdeep Sanyal, Agniva Maiti, Umakanta Maharana, \textbf{Dhruv Kumar}, Ankur Mali, C.\ Lee Giles, and Murari Mandal. 2025. Investigating Pedagogical Teacher and Student LLM Agents: Genetic Adaptation Meets Retrieval-Augmented Generation Across Learning Styles. In \textbf{EMNLP 2025}, 13359--13400.
+
+\item Varun Bharti, Shashwat Jha, \textbf{Dhruv Kumar}, and Pankaj Jalote. 2025. Combining Reasoning Optimised LLMs and SMT Solvers for Automated Loop Invariant Synthesis. In \textbf{AIWare 2025}. \award{Best Paper Award}
+
+\item Aditya Pathak, Rachit Gandhi, Vaibhav Uttam, Arnav Ramamoorthy, Pratyush Ghosh, Aaryan Raj Jindal, Shreyash Verma, Aditya Mittal, Aashna Ased, Chirag Khatri, Yashwanth Nakka, Devansh, Jagat Sesh Challa, and \textbf{Dhruv Kumar}. 2025. Rubric Is All You Need: Improving LLM-Based Code Evaluation With Question-Specific Rubrics. In \textbf{ICER 2025}, 181--195.
+
+\item Adithya Chittem, Aishna Shrivastava, Sai Tarun Pendela, Jagat Sesh Challa, and \textbf{Dhruv Kumar}. 2025. SAC: A Framework for Measuring and Inducing Personality Traits in LLMs with Dynamic Intensity Control. In \textbf{ICAART 2025}.
+
+\item Madhav Krishan Garg, Tejash Prasad, Tanmay Singhal, Chhavi Kirtani, Murari Mandal, and \textbf{Dhruv Kumar}. 2025. ReviewEval: An Evaluation Framework for AI-Generated Reviews. In \textbf{Findings of EMNLP 2025}, 20542--20564.
+
+\item Utkarsh Arora, Anupam Garg, Aryan Gupta, Samyak Jain, Ronit Mehta, Rupin Oberoi, Prachi, Aryaman Raina, Manav Saini, Sachin Sharma, Jaskaran Singh, Sarthak Tyagi, and \textbf{Dhruv Kumar}. 2025. Analyzing LLM Usage in an Advanced Computing Class in India. In \textbf{ACE '25}, 154--163.
+
+\item Ritvik Budhiraja, Ishika Joshi, Jagat Sesh Challa, Harshal D.\ Akolekar, and \textbf{Dhruv Kumar}. 2024. ``It's not like Jarvis, but it's pretty close!''---Examining ChatGPT's Usage among Undergraduate Students in CS. In \textbf{ACE 2024}, 124--133.
+
+\item Shubhang Shekhar Dvivedi, Vyshnav Vijay, Sai Leela Rahul Pujari, Shoumik Lodh, and \textbf{Dhruv Kumar}. 2024. A Comparative Analysis of Large Language Models for Code Documentation Generation. In \textbf{AIware 2024}.
+
+\item Harshal Dev, Raj Gupta, and \textbf{Dhruv Kumar}. 2024. From Cash to Cashless: UPI's Impact on Spending Behavior among Indian Users. In \textbf{CHI EA 2024}, 168:1--168:10.
+
+\item Shikhar Sharma, Manas Mhasakar, Apurv Mehra, Utkarsh Venaik, Ujjwal Singhal, \textbf{Dhruv Kumar}, and Kashish Mittal. 2024. Comuniqa: Exploring Large Language Models For Improving English Speaking Skills. In \textbf{COMPASS 2024}, 256--267.
+
+\item Ishika Joshi, Ritvik Budhiraja, Harshal Dev, Jahnvi Kadia, Mohammad Osama Ataullah, Sayan Mitra, Harshal D.\ Akolekar, and \textbf{Dhruv Kumar}. 2024. ChatGPT in the Classroom: An Analysis of Its Strengths and Weaknesses for Solving Undergraduate CS Questions. In \textbf{SIGCSE 2024}, 625--631.
+
+\item \textbf{Dhruv Kumar}, Sohaib Ahmad, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2023. AggFirstJoin: Optimizing Geo-Distributed Joins using Aggregation-Based Transformations. In \textbf{CCGrid 2023}, 414--425. \award{Best Paper Award}
+
+\item Vikram Goyal, Naveen Kumar, Sourav S.\ Bhowmick, Pawan Goyal, Navneet Goyal, and \textbf{Dhruv Kumar} (Eds.). 2023. Big Data and Artificial Intelligence---11th International Conference, \textbf{BDA 2023}, Proceedings. Lecture Notes in Computer Science 14418. Springer.
+
+\item Joel Wolfrath, Nikhil Sreekumar, \textbf{Dhruv Kumar}, Yuanli Wang, and Abhishek Chandra. 2022. HACCS: Heterogeneity-Aware Clustered Client Selection for Accelerated Federated Learning. In \textbf{IPDPS 2022}, 985--995.
+
+\item Rallapalli Srinivas, Matt Drewitz, Joe Magner, Ajit Pratap Singh, \textbf{Dhruv Kumar}, and Yashwant Bhaskar Katpatal. 2022. Simulating Landscape Hydrologic Connectivity in a Precise Manner Using Hydro-Conditioning. In \textbf{Advances in Computational Modeling and Simulation}, Lecture Notes in Mechanical Engineering. Springer.
+
+\item \textbf{Dhruv Kumar}, Sohaib Ahmad, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2021. AggNet: Cost-Aware Aggregation Networks for Geo-Distributed Streaming Analytics. In \textbf{SEC 2021}, 297--311.
+
+\item Sonal Kumari, Poonam Goyal, Ankit Sood, \textbf{Dhruv Kumar}, Sundar Balasubramaniam, and Navneet Goyal. 2017. Exact, Fast and Scalable Parallel DBSCAN for Commodity Platforms. In \textbf{ICDCN 2017}, Article 14.
+
+\item Poonam Goyal, Sonal Kumari, Sumit Sharma, \textbf{Dhruv Kumar}, Vivek Kishore, Sundar Balasubramaniam, and Navneet Goyal. 2016. A Fast, Scalable SLINK Algorithm for Commodity Cluster Computing Exploiting Spatial Locality. In \textbf{HPCC 2016}, 268--275.
+
+\item Poonam Goyal, Sonal Kumari, \textbf{Dhruv Kumar}, Sundar Balasubramaniam, Navneet Goyal, Saiyedul Islam, and Jagat Sesh Challa. 2015. Parallelizing OPTICS for Commodity Clusters. In \textbf{ICDCN 2015}, 33:1--33:10.
+
+\item Poonam Goyal, Sonal Kumari, \textbf{Dhruv Kumar}, Sundar Balasubramaniam, and Navneet Goyal. 2014. Parallelizing OPTICS for Multicore Systems. In \textbf{ACM COMPUTE 2014}, 17:1--17:6.
+
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsection*{Workshop Papers, Posters \& Abstracts}
+%----------------------------------------------------------------------
+\begin{enumerate}[label=\textbf{W\arabic*.}, leftmargin=2.8em, itemsep=0.3em]
+
+\item Stuti Sinha, Himanshu Kumar, Aryan Raju Mandapati, Rakshit Sakhuja, and \textbf{Dhruv Kumar}. 2026. The Language of Bargaining: Linguistic Effects in LLM Negotiations. In \textbf{ICLR 2026 Workshop on LLM Reasoning}. \textbf{arXiv (2026)}.
+
+\item Shubham Mishra, Shiv Tiwari, Samyek Jain, Gorang Mehrishi, \textbf{Dhruv Kumar}, Pratik Narang, and Harsh Sharma. 2026. From Facts to Conclusions: Integrating Deductive Reasoning in Retrieval-Augmented LLMs. In \textbf{ICLR 2026 Workshop on LLM Reasoning}. \textbf{arXiv (2025)}.
+
+\item Debdeep Sanyal, Aaryan Nagpal, \textbf{Dhruv Kumar}, Murari Mandal, and Saurabh Deshpande. 2025. time2time: Causal Intervention in Hidden States to Simulate Rare Events in Time Series Foundation Models. In \textbf{NeurIPS 2025 Workshop on Time Series Foundation Models (BERT4S)}.
+
+\item Utkarsh Tiwari, Aryan Seth, Adi Mukherjee, Kaavya Mer, Kavish, and \textbf{Dhruv Kumar}. 2025. DebateBench: A Challenging Long Context Reasoning Benchmark For Large Language Models. In \textbf{NAACL SRW 2025}.
+
+\item Shreya Bhatia, Tarushi Gandhi, \textbf{Dhruv Kumar}, and Pankaj Jalote. 2024. Unit Test Generation using Generative AI: A Comparative Performance Analysis of Autogeneration Tools. In \textbf{LLM4Code@ICSE 2024}, 54--61.
+
+\item \textbf{Dhruv Kumar}, Sohaib Ahmad, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2023. AggFirstJoin (Workshop Version). In \textbf{CCGridW 2023}, 308--310.
+
+\item \textbf{Dhruv Kumar}, Joel Wolfrath, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2022. Towards WAN-Aware Join Sampling over Geo-Distributed Data. In \textbf{EdgeSys@EuroSys 2022}, 13--18.
+
+\item Yuanli Wang, Joel Wolfrath, Nikhil Sreekumar, \textbf{Dhruv Kumar}, and Abhishek Chandra. 2021. Accelerated Training via Device Similarity in Federated Learning. In \textbf{EdgeSys@EuroSys 2021}, 31--36.
+
+\item Yuanli Wang, \textbf{Dhruv Kumar}, and Abhishek Chandra. 2020. Exploiting Data Heterogeneity for Performance and Reliability in Federated Learning (Poster). In \textbf{SEC 2020}, 164--166.
+
+\item \textbf{Dhruv Kumar}, Aravind Alagiri Ramkumar, Rohit Sindhu, and Abhishek Chandra. 2019. DeCaf: Iterative Collaborative Processing over the Edge. In \textbf{HotEdge 2019}.
+
+\item \textbf{Dhruv Kumar}, Jian Li, Abhishek Chandra, and Ramesh K.\ Sitaraman. 2019. A TTL-Based Approach for Data Aggregation in Geo-Distributed Streaming Analytics (Abstract). In \textbf{SIGMETRICS 2019}, 15--16.
+
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsection*{Preprints (arXiv\,/\,SSRN)}
+%----------------------------------------------------------------------
+\begin{enumerate}[label=\textbf{P\arabic*.}, leftmargin=2.8em, itemsep=0.3em]
+
+%── 2026 preprints ─────────────────────────────────────────────
+\item Rakshita Goel, S.\ Pranav Kumar, Anmol Agrawal, Divyan Poddar, Pratik Narang, and \textbf{Dhruv Kumar}. 2026. Domain-Partitioned Hybrid RAG for Legal Reasoning: Toward Modular and Explainable Legal AI for India. \textbf{arXiv (2026)}.
+
+\item Gaurish Trivedi, Alakh Sharma, Kartikey Singh Bhandari, Yash Sinha, Pratik Narang, \textbf{Dhruv Kumar}, and Jagat Sesh Challa. 2026. Trust Regions Sell, But Who's Buying? Overlap Geometry as an Alternative Trust Region for Policy Optimization. \textbf{arXiv (2026)}.
+
+\item Devanshu Sahoo, Manish Prasad, Vasudev Majhi, Arjun Neekhra, Yash Sinha, Murari Mandal, Vinay Chamola, and \textbf{Dhruv Kumar}. 2026. The Compliance Paradox: Semantic-Instruction Decoupling in Automated Academic Code Evaluation. \textbf{arXiv (2026)}.
+
+\item Aakash Trivedi, Aniket Upadhyay, Pratik Narang, \textbf{Dhruv Kumar}, and Praveen Kumar. 2026. A Hybrid Supervised-LLM Pipeline for Actionable Suggestion Mining in Unstructured Customer Reviews. \textbf{arXiv (2026)}.
+
+\item Aditya Thole, Anmol Agrawal, Arnav Ramamoorthy, and \textbf{Dhruv Kumar}. 2026. PhysicsSolutionAgent: Towards Multimodal Explanations for Numerical Physics Problem Solving. \textbf{arXiv (2026)}.
+
+\item Kartikey Singh Bhandari, Manav Ganesh, Yashwant Viswanathan, Archit Agrawal, \textbf{Dhruv Kumar}, and Pratik Narang. 2026. Actionable Advice from Reviews via Mixture of LoRA Experts: A Two-LLM Pipeline for Issue Extraction and Business Recommendations. \textbf{arXiv (2026)}.
+
+\item Kartikey Singh Bhandari, Tanish Jain, Archit Agrawal, \textbf{Dhruv Kumar}, Praveen Kumar, and Pratik Narang. 2026. A Multi-Agent System for Generating Actionable Business Advice. \textbf{arXiv (2026)}.
+
+\item Devesh Saraogi, Rohit Singhee, and \textbf{Dhruv Kumar}. 2026. Evaluating Novelty in AI-Generated Research Plans Using Multi-Workflow LLM Pipelines. \textbf{arXiv (2026)}.
+
+\item Aviral Gupta, Armaan Sethi, and \textbf{Dhruv Kumar}. 2026. TabPFN Through The Looking Glass: An Interpretability Study of TabPFN and Its Internal Representations. \textbf{arXiv (2026)}.
+
+%── 2025 preprints ─────────────────────────────────────────────
+\item Varun Bharti, Shashwat Jha, \textbf{Dhruv Kumar}, and Pankaj Jalote. 2025. Automated Type Annotation in Python Using Large Language Models. \textbf{arXiv:2508.00422 (2025)}.
+
+\item Gaurish Trivedi, Alakh Sharma, Kartikey Singh Bhandari, \textbf{Dhruv Kumar}, Pratik Narang, and Jagat Sesh Challa. 2025. HAEPO: History-Aggregated Exploratory Policy Optimization. \textbf{arXiv:2508.18884 (2025)}.
+
+\item Manan Gupta and \textbf{Dhruv Kumar}. 2025. Disentangling Polysemantic Neurons with a Null-Calibrated Polysemanticity Index and Causal Patch Interventions. \textbf{arXiv:2508.16950 (2025)}.
+
+\item Sankalp Tattwadarshi Swain, Anshika Krishnatray, \textbf{Dhruv Kumar}, and Jagat Sesh Challa. 2025. Talking with Oompa Loompas: A Novel Framework for Evaluating Linguistic Acquisition of LLM Agents. \textbf{arXiv:2509.07389 (2025)}.
+
+\item Chinmay Pushkar, Sanchit Kabra, \textbf{Dhruv Kumar}, and Jagat Sesh Challa. 2025. Beyond Single Bugs: Benchmarking LLMs for Multi-Vulnerability Detection. \textbf{arXiv (2025)}.
+
+\item Vaibhav Devraj, \textbf{Dhruv Kumar}, Jagat Sesh Challa, Parth Agarwal, Navya Kommuri, Trizal Garg, Prisha Singhal, and Dhruv Shah. 2025. CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics. \textbf{arXiv (2025)}.
+
+\item Unnati Saraswat, Tarun Rao, Namah Gupta, Shweta Swami, Shikhar Sharma, Prateek Narang, and \textbf{Dhruv Kumar}. 2025. Toward Intelligent Scene Augmentation for Context-Aware Object Placement and Sponsor-Logo Integration. \textbf{arXiv (2025)}.
+
+\item Arnav Gupta, Gurekas Singh Sahney, Hardik Rathi, Abhishek Chandwani, Ishaan Gupta, Pratik Narang, and \textbf{Dhruv Kumar}. 2025. Understanding Virality: A Rubric-Based Vision-Language Model Framework for Short-Form Edutainment Evaluation. \textbf{arXiv (2025)}.
+
+\item Akshaj Prashanth Rao, Advait Singh, Saumya Kumaar Saksena, and \textbf{Dhruv Kumar}. 2025. Efficient Jailbreak Mitigation Using Semantic Linear Classification in a Multi-Staged Pipeline. \textbf{arXiv (2025)}.
+
+\item Aryan Chaudhary, Sanchit Goyal, Pratik Narang, and \textbf{Dhruv Kumar}. 2025. Investigating Spatial Attention Bias in Vision-Language Models. \textbf{arXiv (2025)}.
+
+\item Daksh Jain, Aarya Jain, Ashutosh Desai, Avyakt Verma, Ishan Bhanuka, Pratik Narang, and \textbf{Dhruv Kumar}. 2025. Large Language Models as Pok\'{e}mon Battle Agents: Strategic Play and Content Generation. \textbf{arXiv (2025)}.
+
+\item Chayan Jain, Rishant Sharma, Archit Garg, Ishan Bhanuka, Pratik Narang, and \textbf{Dhruv Kumar}. 2025. Lights, Camera, Consistency: A Multistage Pipeline for Character-Stable AI Video Stories. \textbf{arXiv (2025)}.
+
+\item Darshil Chauhan, Adityasinh Solanki, Vansh Patel, Kanav Kapoor, Ritvik Jain, Aditya Bansal, \textbf{Dhruv Kumar}, and Prateek Narang. 2025. Bridging the Reality Gap: Efficient Adaptation of ASR Systems for Challenging Low-Resource Domains. \textbf{arXiv (2025)}.
+
+\item Charan Prakash Rathore, Saumi Ray, and \textbf{Dhruv Kumar}. 2025. Evaluating LLMs for Zeolite Synthesis Event Extraction (ZSEE): A Systematic Analysis of Prompting Strategies. \textbf{arXiv (2025)}.
+
+\item Arnav Ramamoorthy, Shrey Dhorajiya, Ojas Pungalia, Rashi Upadhyay, Abhishek Mishra, Abhiram H., Tejasvi Alladi, Sujan Yenuganti, and \textbf{Dhruv Kumar}. 2025. neuralFOMO: Can LLMs Handle Being Second Best? Measuring Envy-Like Preferences in Multi-Agent Settings. \textbf{arXiv (2025)}.
+
+\item Devanshu Sahoo, Manish Prasad, Vasudev Majhi, Jahnvi Singh, Vinay Chamola, Yash Sinha, Murari Mandal, and \textbf{Dhruv Kumar}. 2025. When Reject Turns into Accept: Quantifying the Vulnerability of LLM-Based Scientific Reviewers to Indirect Prompt Injection. \textbf{arXiv (2025)}.
+
+\item Devanshu Sahoo, Vasudev Majhi, Arjun Neekhra, Yash Sinha, Murari Mandal, and \textbf{Dhruv Kumar}. 2025. How to Trick Your AI TA: A Systematic Study of Academic Jailbreaking in LLM Code Evaluation. \textbf{arXiv (2025)}.
+
+\item Madhav Krishna, Dhruv Gupta, Kotra Keshav, Hritav Singh, Akash Bonagiri, Pratik Narang, and \textbf{Dhruv Kumar}. 2025. MarketMaven: An Agent-Based AI for Automated Startup Analysis and Market Intelligence. \textbf{SSRN (2025)}.
+
+\item Sasank Tumpati, Devansh Agarwal, and \textbf{Dhruv Kumar}. 2025. Magistrate: A Repository-Context Aware Multi-Agent Framework for Automated Code Review. \textbf{SSRN (2025)}.
+
+\item Debdeep Sanyal, Manya Pandey, \textbf{Dhruv Kumar}, Saurabh Deshpande, and Murari Mandal. 2025. Confidence is Not Competence: Evaluating Calibration in LLMs. \textbf{arXiv (2025)}.
+
+\item Debdeep Sanyal, Aakash Sen Sharma, \textbf{Dhruv Kumar}, Saurabh Deshpande, and Murari Mandal. 2025. Policy Optimization Prefers The Path of Least Resistance. \textbf{arXiv (2025)}.
+
+%── 2024 preprints ─────────────────────────────────────────────
+\item Henansh Tanwar, Kunal Shrivastva, Rahul Singh, and \textbf{Dhruv Kumar}. 2024. OpineBot: Class Feedback Reimagined Using a Conversational LLM. \textbf{arXiv:2401.15589 (2024)}.
+
+\item Aryaman Raina, Prateek Mishra, Harshit Goyal, and \textbf{Dhruv Kumar}. 2024. AI as a Medical Ally: Evaluating ChatGPT's Usage and Impact in Indian Healthcare. \textbf{arXiv:2401.15605 (2024)}.
+
+\item Vibhor Agarwal, Nakul Thureja, Madhav Krishan Garg, Sahiti Dharmavaram, Meghna, and \textbf{Dhruv Kumar}. 2024. ``Which LLM should I use?'': Evaluating LLMs for Tasks Performed by Undergraduate CS Students in India. \textbf{arXiv:2402.01687 (2024)}.
+
+\item Anishka, Diksha Sethi, Nipun Gupta, Shikhar Sharma, Srishti Jain, Ujjwal Singhal, and \textbf{Dhruv Kumar}. 2024. TAMIGO: Empowering Teaching Assistants using LLM-Assisted Viva and Code Assessment. \textbf{arXiv:2407.16805 (2024)}.
+
+\item Shreya Bhatia, Tarushi Gandhi, \textbf{Dhruv Kumar}, and Pankaj Jalote. 2024. System Test Case Design from Requirements Specifications: Insights and Challenges of Using ChatGPT. \textbf{arXiv:2412.03693 (2024)}.
+
+%── 2023 preprints ─────────────────────────────────────────────
+\item Ishika Joshi, Ritvik Budhiraja, Pranav Deepak Tanna, Lovenya Jain, Mihika Deshpande, Arjun Srivastava, Srinivas Rallapalli, Harshal D.\ Akolekar, Jagat Sesh Challa, and \textbf{Dhruv Kumar}. 2023. ``With Great Power Comes Great Responsibility!'': Student and Instructor Perspectives on the Influence of LLMs on Undergraduate Engineering Education. \textbf{arXiv:2309.10694 (2023)}.
+
+\item Atharva Mehta, Nipun Gupta, Aarav Balachandran, \textbf{Dhruv Kumar}, Pankaj Jalote, et al.\ 2023. Can ChatGPT Play the Role of a Teaching Assistant in an Introductory Programming Course? \textbf{arXiv (2023)}.
+
+\end{enumerate}
+
+%==========================================================================
+%  SECTION 13: SPONSORED RESEARCH PROJECTS
+%==========================================================================
+\newpage
+\cvsectionnn{Sponsored Research Projects}
+
+%----------------------------------------------------------------------
+% 1. SPANDAN (03/2026) — most recent
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \multicolumn{2}{l}{\color{white}\textbf{\large 1.\enspace SPANDAN --- AI/ML for Strengthening Police Investigation Processes}} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Funding Agency}      & Gujarat Police (Office of Superintendent of Police, Ahmedabad Rural) \\
+  \textbf{Budget}              & INR 34,80,000 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Duration}            & 11 months (03/2026--01/2027) \\
+  \textbf{Status}              & \textcolor{AwardRed}{Ongoing} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Role}                & PI \\
+  %\textbf{PCR Evaluation Grade} & N/A \\  % commented out
+\end{tabularx}
+
+%\vspace{0.3em}
+%\textbf{\color{AccentBlue}Summary of Results \& Publications:}
+%\begin{itemize}
+%  \item % To be added once results are available.
+%\end{itemize}
+
+\vspace{0.8em}
+
+%----------------------------------------------------------------------
+% 2. Revolutionizing Higher Ed (11/2024)
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \multicolumn{2}{l}{\color{white}\textbf{\large 2.\enspace Revolutionizing Indian Higher Education Institutes with Generative AI}} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Funding Agency}      & BITS Pilani \\
+  \textbf{Budget}              & INR 20,00,000 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Duration}            & 24 months (11/2024--10/2026) \\
+  \textbf{Status}              & \textcolor{AwardRed}{Ongoing} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Role}                & PI \\
+  %\textbf{PCR Evaluation Grade} & N/A \\  % commented out
+\end{tabularx}
+
+\vspace{0.3em}
+\textbf{\color{AccentBlue}Summary of Results \& Publications:}
+\begin{itemize}
+  \item Pathak, A.; \textbf{Kumar, D.}; et al.\ 2025. Rubric Is All You Need: LLM-based code evaluation. \textit{ACM ICER 2025}.
+  \item Arora, U.; \textbf{Kumar, D.}; et al.\ 2025. Analyzing LLM usage in an advanced computing class in India. \textit{ACE '25}, 154--163.
+\end{itemize}
+
+\vspace{0.8em}
+
+%----------------------------------------------------------------------
+% 3. AI for River–Climate Modeling (08/2024)
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \multicolumn{2}{l}{\color{white}\textbf{\large 3.\enspace AI for River--Climate Modeling}} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Funding Agency}      & The Nature Conservancy (NGO) \\
+  \textbf{Budget}              & INR 25,00,000 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Duration}            & 11 months (08/2024--06/2025) \\
+  \textbf{Status}              & Completed \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Role}                & Co-PI \\
+  %\textbf{PCR Evaluation Grade} & N/A \\  % commented out
+\end{tabularx}
+
+\vspace{0.3em}
+\textbf{\color{AccentBlue}Summary of Results \& Publications:}
+\begin{itemize}
+  \item Rallapalli, S.; \textbf{Kumar, D.}; et al.\ 2025. Quantifying the role of land use--land cover for adaptive river basin management. \textit{Journal of Environmental Management} (under submission).
+  \item Rallapalli, S.; \textbf{Kumar, D.}; et al.\ 2025. Targeting degraded hotspots in riparian corridors for rehabilitation. \textit{Journal of Environmental Management} (under submission).
+  \item Rallapalli, S.; \textbf{Kumar, D.}; et al.\ 2025. Quantifying the synergistic influence of LULC and climate on hydro-climatological dynamics. \textit{Journal of Hydrology} (under submission).
+  \item Rallapalli, S.; \textbf{Kumar, D.}; et al.\ 2025. Disaggregating the influence of climate change and LULC on streamflow. \textit{Journal of Environmental Management} (under submission).
+\end{itemize}
+
+\vspace{0.8em}
+
+%----------------------------------------------------------------------
+% 4. Generative AI in Education Grant (08/2024)
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \multicolumn{2}{l}{\color{white}\textbf{\large 4.\enspace Generative AI in Education Grant}} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Funding Agency}      & WISE--IIE Higher Education Consortium \\
+  \textbf{Budget}              & INR 30,00,000 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Duration}            & 10 months (08/2024--05/2025) \\
+  \textbf{Status}              & Completed \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Role}                & Co-PI \\
+  %\textbf{PCR Evaluation Grade} & N/A \\  % commented out
+\end{tabularx}
+
+\vspace{0.3em}
+\textbf{\color{AccentBlue}Summary of Results \& Publications:}
+\begin{itemize}
+  \item Akolekar, H.; \textbf{Kumar, D.}; et al.\ 2025. Generative AI tools in mechanical engineering education. \textit{Scientific Reports} 15, 9214.
+  \item Gupta, R.; \textbf{Kumar, D.}; et al.\ 2025. Sakshm AI: Socratic tutoring for coding education in India. \textit{ACM JCSS 2026}.
+  \item Goyal, H.; \textbf{Kumar, D.}; et al.\ 2025. Impact of LLMs on K-12 education in rural India. \textit{Scientific Reports 2025}.
+  \item Sanyal, D.; \textbf{Kumar, D.}; et al.\ 2025. Investigating pedagogical teacher and student LLM agents. \textit{EMNLP 2025}.
+\end{itemize}
+
+\vspace{0.8em}
+
+%----------------------------------------------------------------------
+% 5. Google Cloud Education Grant (01/2024) — oldest
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{L{4.0cm} X}
+  \rowcolor{AccentBlue}
+  \multicolumn{2}{l}{\color{white}\textbf{\large 5.\enspace Google Cloud Education Grant}} \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Funding Agency}      & Google Cloud \\
+  \textbf{Budget}              & INR 12,50,000 \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Duration}            & 12 months (01/2024--12/2024) \\
+  \textbf{Status}              & Completed \\
+  \rowcolor{AccentVeryLight}
+  \textbf{Role}                & PI \\
+  %\textbf{PCR Evaluation Grade} & N/A \\  % commented out
+\end{tabularx}
+
+\vspace{2em}
+
+\end{document}
