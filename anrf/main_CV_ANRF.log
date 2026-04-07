@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.18)  1 APR 2026 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.18)  7 APR 2026 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -975,7 +975,7 @@ Underfull \hbox (badness 10000) in alignment at lines 269--269
 
 [2] [3] [4] [5]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-22.
+26.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -987,13 +987,13 @@ Package rerunfilecheck Info: File `main_CV_ANRF.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24448 strings out of 476025
- 457959 string characters out of 5790017
+ 24454 strings out of 476025
+ 458015 string characters out of 5790017
  1887388 words of memory out of 5000000
  44164 multiletter control sequences out of 15000+600000
- 577591 words of font info for 166 fonts, out of 8000000 for 9000
+ 577775 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,80p,1201b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,80p,1201b,640s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2023/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2023/texm
@@ -1003,10 +1003,10 @@ ublic/lm/lmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr
 9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
-Output written on main_CV_ANRF.pdf (7 pages, 309471 bytes).
+Output written on main_CV_ANRF.pdf (7 pages, 309927 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 89 named destinations out of 1000 (max. 500000)
  36365 words of extra memory for PDF output out of 42996 (max. 10000000)
 
