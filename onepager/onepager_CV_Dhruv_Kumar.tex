@@ -1,0 +1,219 @@
+%==============================================================================
+%  ONE-PAGER CV — Dr. Dhruv Kumar
+%  Compile with: lualatex
+%==============================================================================
+\documentclass[10pt, a4paper]{article}
+
+%--------------------------------------------------------------------------
+% Packages
+%--------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+\usepackage[margin=1.5cm, top=1.3cm, bottom=1.3cm]{geometry}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage{calc}
+\usepackage{fontawesome5}
+
+%--------------------------------------------------------------------------
+% Colour palette
+%--------------------------------------------------------------------------
+\definecolor{AccentBlue}{HTML}{1B4F8A}
+\definecolor{AccentLight}{HTML}{3A7FD5}
+\definecolor{AccentVeryLight}{HTML}{EBF2FB}
+\definecolor{AwardRed}{HTML}{C0392B}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = AccentLight,
+  linkcolor  = AccentBlue,
+  pdfauthor  = {Dr. Dhruv Kumar},
+  pdftitle   = {One-Pager CV -- Dr. Dhruv Kumar},
+}
+
+\newcommand{\Rs}{\faRupeeSign}
+\setlength{\parindent}{0pt}
+
+%--------------------------------------------------------------------------
+% Layout helpers
+%--------------------------------------------------------------------------
+\pagestyle{empty}
+
+\newcommand{\cvsec}[1]{%
+  \vspace{1.0em}%
+  \noindent{\large\bfseries\color{AccentBlue}#1}%
+  \par\vspace{-0.42em}%
+  {\color{AccentBlue}\rule{\linewidth}{1.2pt}}\par%
+  \vspace{0.45em}%
+}
+
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+%==========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+%==========================================================================
+%  HEADER BANNER
+%==========================================================================
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[AccentBlue] (current page.north west) rectangle
+    ([yshift=-3.7cm]current page.north east);
+\end{tikzpicture}
+
+\vspace{-0.55cm}
+\begin{minipage}[t]{0.72\linewidth}
+  \color{white}
+  {\fontsize{22}{27}\selectfont\bfseries Dr.\ Dhruv Kumar}\\[0.25em]
+  {\normalsize\bfseries Assistant Professor, BITS Pilani \;|\; Adjunct Faculty, IIIT Delhi}\\[0.22em]
+  {\small Generative AI \;\textbullet\;
+         LLMs \;\textbullet\;
+         Agentic AI \;\textbullet\;
+         Computing Education}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.25\linewidth}
+  \raggedleft\color{white}\footnotesize
+  {\hypersetup{urlcolor=white}%
+   \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily dhruv.kumar@\allowbreak pilani.bits-pilani.ac.in}}\\[0.4em]
+  {\hypersetup{urlcolor=white}%
+   \href{https://kudhru.github.io}{\ttfamily kudhru.github.io}}
+\end{minipage}
+
+\vspace{2.5em}
+
+%==========================================================================
+%  AFFILIATIONS
+%==========================================================================
+\cvsec{Affiliations}
+
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{5pt}
+
+\noindent{\small\color{AccentBlue}\bfseries Current}
+
+\vspace{0.25em}
+\begin{tabularx}{\linewidth}{L{3.5cm} X}
+  \small\textbf{May 2024 – Present} & \small\textbf{Assistant Professor} — BITS Pilani, Rajasthan, India \\
+  \small\textbf{May 2024 – Present} & \small\textbf{Adjunct Faculty} — IIIT Delhi, New Delhi, India \\
+\end{tabularx}
+
+\vspace{0.6em}
+\noindent{\small\color{AccentBlue}\bfseries Previous}
+
+\vspace{0.25em}
+\begin{tabularx}{\linewidth}{L{3.5cm} X}
+  \small\textbf{2022 – 2024}   & \small\textbf{Assistant Professor} — IIIT Delhi \\[0.2em]
+  \small\textbf{Mar – Jul 2022}  & \small\textbf{Post-Doctoral Researcher} — Microsoft Research, Bengaluru \\[0.2em]
+  \small\textbf{2017 – 2022}   & \small\textbf{Ph.D., Computer Science} — University of Minnesota, Twin Cities, USA \\[0.2em]
+  \small\textbf{2010 – 2014}   & \small\textbf{B.E.\ (Hons.) Computer Science} — BITS Pilani \\
+\end{tabularx}
+
+%==========================================================================
+%  PUBLICATION VENUES
+%==========================================================================
+\cvsec{Publication Venues at a Glance}
+
+\noindent\small \textbf{88+ papers} (2014–2026) at top-tier venues, including:
+
+\vspace{0.55em}
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\linewidth}{L{3.8cm} X}
+  \rowcolor{AccentBlue}
+    \color{white}\small\bfseries Area &
+    \color{white}\small\bfseries Venues \\
+  \rowcolor{AccentVeryLight}
+    \small\bfseries\color{AccentBlue} NLP, AI \& Web &
+    \small ACL, EMNLP (main \& Findings), AACL-IJCNLP;\; COLM;\; TMLR;\; The Web Conference (WWW);\; NeurIPS, ICLR, ICML, ACL, EMNLP, CVPR Workshops \\
+    \small\bfseries\color{AccentBlue} Computing Ed.\ \& HCI &
+    \small SIGCSE, ACM ICER, ACE, COMPASS, CHI;\; AIWare (IEEE/ACM), LLM4Code@ICSE;\; ACM JCSS \\
+  \rowcolor{AccentVeryLight}
+    \small\bfseries\color{AccentBlue} Systems &
+    \small ACM SIGMETRICS (PACM MACS), IPDPS, SEC, CCGrid \\
+\end{tabularx}
+
+\vspace{0.55em}
+\noindent\small{\bfseries\color{AwardRed}2\texttimes\ Best Paper Award}\enspace
+\normalcolor\small(CCGrid 2023 \& AIWare 2025)
+
+%==========================================================================
+%  FUNDED RESEARCH PROJECTS
+%==========================================================================
+\cvsec{Funded Research Projects}
+
+\noindent\small
+Total Funding Received:\enspace
+\textbf{\color{AccentBlue}\Rs\,1.22 Crore (INR)}\enspace|\enspace
+5 Sponsored Projects (2024–2027)
+
+\vspace{0.55em}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\linewidth}{X L{4.2cm} L{1.5cm} L{2.5cm} L{1.0cm}}
+  \rowcolor{AccentBlue}
+    \color{white}\small\bfseries Project &
+    \color{white}\small\bfseries Funding Agency &
+    \color{white}\small\bfseries Budget &
+    \color{white}\small\bfseries Duration &
+    \color{white}\small\bfseries Role \\
+  \rowcolor{AccentVeryLight}
+    \small SPANDAN: AI/ML for Police Investigation &
+    \small Gujarat Police &
+    \small \Rs\,34.8L &
+    \small Mar 2026–Feb 2027 &
+    \small PI \\
+    \small GenAI for Indian Higher Education &
+    \small BITS Pilani &
+    \small \Rs\,20.0L &
+    \small Nov 2024–Oct 2026 &
+    \small PI \\
+  \rowcolor{AccentVeryLight}
+    \small Generative AI in Education Grant &
+    \small WISE-IIE Consortium &
+    \small \Rs\,30.0L &
+    \small Aug 2024–May 2025 &
+    \small Co-PI \\
+    \small AI for River–Climate Modeling &
+    \small The Nature Conservancy &
+    \small \Rs\,25.0L &
+    \small Aug 2024–Jun 2025 &
+    \small Co-PI \\
+  \rowcolor{AccentVeryLight}
+    \small Google Cloud Education Grant &
+    \small Google Cloud &
+    \small \Rs\,12.5L &
+    \small Jan 2024–Dec 2024 &
+    \small PI \\
+\end{tabularx}
+
+%==========================================================================
+%  RESEARCH CONSULTANCY
+%==========================================================================
+\cvsec{Research Consultancy}
+
+\noindent\small
+Ongoing research consultancy and collaborative projects with
+\textbf{Trustwise}, \textbf{Disha AI}, and \textbf{Birla AI Labs}.
+
+%==========================================================================
+%  RECOGNITION & AWARDS
+%==========================================================================
+\cvsec{Recognition \& Awards}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=2pt, parsep=0pt, topsep=3pt}
+\begin{itemize}\small
+  \item \textbf{Teaching Excellence Award} — IIIT Delhi (AY 2022--23 \& AY 2023--24)
+  \item \textbf{3M Science \& Technology Fellowship} — University of Minnesota, Twin Cities (2017--2021)
+\end{itemize}
+
+\end{document}
