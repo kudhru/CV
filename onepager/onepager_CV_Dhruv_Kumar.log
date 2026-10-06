@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.9.18)  11 SEP 2026 21:54
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.9.18)  6 OCT 2026 09:54
  restricted system commands enabled.
 **onepager_CV_Dhruv_Kumar.tex
 (./onepager_CV_Dhruv_Kumar.tex
@@ -1016,7 +1016,7 @@ Here is how much of LuaTeX's memory you used:
    4 hlist, 1 vlist, 1 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_ke
 rn, 4 glyph, 9 attribute, 69 glue_spec, 9 attribute_list, 2 write, 1 pdf_action 
 nodes
-   avail lists: 2:1515,3:520,4:431,5:678,6:232,7:7933,8:1,9:1535,10:2,11:426
+   avail lists: 2:1515,3:520,4:428,5:681,6:232,7:7957,8:1,9:1535,10:2,11:426
  47721 multiletter control sequences out of 65536+600000
  74 fonts using 7379319 bytes
  100i,9n,98p,1019b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1027,7 +1027,7 @@ m/lmmono8-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/
 lm/lmroman9-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/publi
 c/lm/lmroman10-bold.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/publi
 c/lm/lmroman12-bold.otf>
-Output written on onepager_CV_Dhruv_Kumar.pdf (1 page, 33426 bytes).
+Output written on onepager_CV_Dhruv_Kumar.pdf (1 page, 33415 bytes).
 
 PDF statistics: 62 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
