@@ -7,9 +7,10 @@
 %--------------------------------------------------------------------------
 % Packages
 %--------------------------------------------------------------------------
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{fontspec}
+\setmainfont{Charter}
+\setsansfont{Charter}
+\setmonofont{Latin Modern Mono}
 \usepackage[margin=1.8cm, top=1.5cm, bottom=1.8cm]{geometry}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -132,21 +133,24 @@
 %==========================================================================
 \begin{tikzpicture}[remember picture, overlay]
   \fill[AccentBlue] (current page.north west) rectangle
-    ([yshift=-4.4cm]current page.north east);
+    ([yshift=-4.3cm]current page.north east);
 \end{tikzpicture}
 
 \vspace{-0.9cm}
-\begin{minipage}[t]{0.65\linewidth}
+\begin{minipage}[t]{\linewidth}
   \color{white}
   {\fontsize{24}{29}\selectfont\bfseries Dr.\ Dhruv Kumar}\\[0.3em]
-  {\large\color{white}\bfseries BIO-DATA}\\[0.25em]
-  {\normalsize Assistant Professor, BITS Pilani}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.33\linewidth}
-  \raggedleft\color{white}\small
-  {\hypersetup{urlcolor=white}\href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily\footnotesize dhruv.kumar@pilani.bits-pilani.ac.in}}\\[0.5em]
-  (+91)\ 77427\ 10554
+  {\normalsize Assistant Professor, BITS Pilani}\\[0.22em]
+  {\small LLMs \;\textbullet\;
+         Agentic AI \;\textbullet\;
+         Recursive Self-Improvement \;\textbullet\;
+         Autonomous AI for Science}\\[0.5em]
+  {\hypersetup{urlcolor=white}\footnotesize
+   \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{dhruv.kumar@pilani.bits-pilani.ac.in}
+   \;\textbullet\;
+   \href{https://kudhru.github.io}{kudhru.github.io}
+   \;\textbullet\;
+   (+91)\ 77427\ 10554}
 \end{minipage}
 
 \vspace{2.8em}
@@ -165,7 +169,7 @@
   \textbf{Address}            & 6120-F, New Academic Building, BITS Pilani, Rajasthan -- 333031 \\
   \rowcolor{AccentVeryLight}
   \textbf{Institution}        & Birla Institute of Technology \& Science (BITS), Pilani \\
-  \textbf{Email}              & \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily dhruv.kumar@pilani.bits-pilani.ac.in} \\
+  \textbf{Email}              & \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{dhruv.kumar@pilani.bits-pilani.ac.in} \\
   \rowcolor{AccentVeryLight}
   \textbf{Phone}              & (+91)\ 77427\ 10554 \\
   \textbf{Date of Birth}      & 11 January 1994 \\

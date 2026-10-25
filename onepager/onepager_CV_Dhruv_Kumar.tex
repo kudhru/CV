@@ -8,8 +8,8 @@
 % Packages
 %--------------------------------------------------------------------------
 \usepackage{fontspec}
-\setmainfont{Latin Modern Roman}
-\setsansfont{Latin Modern Sans}
+\setmainfont{Charter}
+\setsansfont{Charter}
 \setmonofont{Latin Modern Mono}
 \usepackage[margin=1.5cm, top=1.3cm, bottom=1.3cm]{geometry}
 \usepackage{xcolor}
@@ -67,29 +67,27 @@
 %==========================================================================
 \begin{tikzpicture}[remember picture, overlay]
   \fill[AccentBlue] (current page.north west) rectangle
-    ([yshift=-3.7cm]current page.north east);
+    ([yshift=-4.0cm]current page.north east);
 \end{tikzpicture}
 
 \vspace{-0.55cm}
-\begin{minipage}[t]{0.72\linewidth}
+\begin{minipage}[t]{\linewidth}
   \color{white}
   {\fontsize{22}{27}\selectfont\bfseries Dr.\ Dhruv Kumar}\\[0.25em]
   {\normalsize\bfseries Assistant Professor, BITS Pilani \;|\; Adjunct Faculty, IIIT Delhi}\\[0.22em]
-  {\small Generative AI \;\textbullet\;
-         LLMs \;\textbullet\;
+  {\small LLMs \;\textbullet\;
          Agentic AI \;\textbullet\;
-         Computing Education}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.25\linewidth}
-  \raggedleft\color{white}\footnotesize
-  {\hypersetup{urlcolor=white}%
-   \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{\ttfamily dhruv.kumar@\allowbreak pilani.bits-pilani.ac.in}}\\[0.4em]
-  {\hypersetup{urlcolor=white}%
-   \href{https://kudhru.github.io}{\ttfamily kudhru.github.io}}
+         Recursive Self-Improvement \;\textbullet\;
+         Autonomous AI for Science}\\[0.5em]
+  {\hypersetup{urlcolor=white}\footnotesize
+   \href{mailto:dhruv.kumar@pilani.bits-pilani.ac.in}{dhruv.kumar@pilani.bits-pilani.ac.in}
+   \;\textbullet\;
+   \href{https://kudhru.github.io}{kudhru.github.io}
+   \;\textbullet\;
+   (+91)\ 77427\ 10554}
 \end{minipage}
 
-\vspace{2.5em}
+\vspace{3.0em}
 
 %==========================================================================
 %  AFFILIATIONS
@@ -202,7 +200,7 @@ Total Funding Received:\enspace
 \cvsec{Research Consultancy}
 
 \noindent\small
-Ongoing research consultancy and collaborative projects with
+Previously completed research consultancy and collaborative projects with
 \textbf{Trustwise}, \textbf{Disha AI}, and \textbf{Birla AI Labs}.
 
 %==========================================================================
